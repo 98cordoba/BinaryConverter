@@ -1,11 +1,14 @@
+/* Initial References */
 let decInp = document.getElementById("dec-inp");
 let binInp = document.getElementById("bin-inp");
 let errorMsg = document.getElementById("error-msg");
-decInp.addEventListener("",() => {
-    let decValue = parseInt(decInp.decValue);
+/* Evento Decimal */
+decInp.addEventListener("input",() => {
+    let decValue = parseInt(decInp.value);
     binInp.value = decValue.toString(2);
 });
-binInp.addEventListener("",() => {
+/*Evento Binario */
+binInp.addEventListener("input",() => {
     let binValue = binInp.value;
     if (binValidator(binValue)) {
         decInp.value = parseInt(binValue,2);
